@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+   <title>Perfect Theory · blackjack terminal</title>
+   <meta name="description"
+      content="A blackjack trainer laid out like a trading terminal: bet, count, play every hand out, and see what each decision cost. Runs entirely in your browser.">
+   <meta name="color-scheme" content="dark light">
+   <meta name="theme-color" content="#0e1013">
+   <link rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e1013'/%3E%3Cpath d='M7 22 L13 10 L19 22' stroke='%233fa88a' stroke-width='2.4' fill='none'/%3E%3Cpath d='M9.5 18h7' stroke='%233fa88a' stroke-width='2.4'/%3E%3C/svg%3E">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+   <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+   <a class="skip" href="#col-game">Skip to the table</a>
+
+   <div class="container">
+
+      <div class="menu-bar">
+         <div class="menu-bar__left">
+            <div class="menu-bar__brand">PERFECT&nbsp;THEORY</div>
+            <div class="menu-bar__item" id="menu-state">IDLE</div>
+         </div>
+         <div class="menu-bar__right" id="menu-stats"></div>
+      </div>
+
+      <div class="dashboard">
+
+         <div class="dashboard__column" id="col-left" aria-label="Overview"></div>
+
+         <div class="dashboard__column dashboard__column--game" id="col-game" aria-label="Table"></div>
+
+         <div class="dashboard__column" id="col-right" aria-label="Training">
+            <div id="train-rail"></div>
+            <div id="col-right-extra"></div>
+         </div>
+
+         <div class="dashboard__column dashboard__column--panel">
+            <div class="tabstrip" id="panel-tabs" role="tablist" aria-label="Reference"></div>
+            <div class="panel-body" id="col-main"></div>
+         </div>
+
+      </div>
+
+      <div class="status-bar">
+         <div class="status-bar__left" id="status-left"></div>
+         <div class="status-bar__right" id="status-right"></div>
+      </div>
+
+   </div>
+
+   <noscript>
+      <div class="noscript">The trainer computes strategy and expected values in the browser, so it needs JavaScript.
+         Nothing is sent anywhere either way.</div>
+   </noscript>
+   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+   <script src="js/core.js"></script>
+   <script src="js/strategy.js"></script>
+   <script src="js/ev.js"></script>
+   <script src="js/round.js"></script>
+   <script src="js/catalog.js"></script>
+   <script src="js/cards.js"></script>
+   <script src="js/deck.js"></script>
+   <script src="js/dom.js"></script>
+   <script src="js/store.js"></script>
+   <script src="js/train.js"></script>
+   <script src="js/views.js"></script>
+   <script src="js/app.js"></script>
+</body>
+
+</html>

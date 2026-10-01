@@ -2,7 +2,7 @@
    "name": "split-decision",
    "version": "1.0.0",
    "description": "Blackjack trainer for learning mathematically optimal play",
-   "main": "scripts/index.js",
+   "main": "scripts/script.js",
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
    },
